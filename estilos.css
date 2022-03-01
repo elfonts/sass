@@ -1,0 +1,296 @@
+/*Box Model*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+/*Responsive*/
+
+/*Desktop*/
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    padding: 20px;
+    margin-top: 0px;
+    
+}
+
+span {
+    background-color: rgb(209, 209, 209);
+    padding: 10px 35px;
+    text-align: center;
+    border-radius: 20px;
+    align-content: center;
+    margin-left: 10px;
+    
+}
+
+
+
+h2 {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: gray;
+    font-size: 20px;
+    text-align: left;
+    margin: 5px;
+
+}
+
+
+
+
+p {
+    text-align: justify;
+    margin: 5px;
+
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+.border {
+    border: solid 1px rgb(255, 255, 255);
+    background-color: rgb(243, 243, 243);
+}
+
+.cabeza {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.article {
+    width: 200px;
+}
+
+
+
+#servicios {
+background-image: url(./img/back3.jpg);
+margin: 5px;
+}
+
+/*Transicion*/
+article img:hover {
+    filter: opacity(.5);
+}
+
+span:hover {
+    border-left: solid 5px rgb(0, 175, 175) ;
+    background-color: rgb(32, 158, 167);
+    color: honeydew;
+    
+    
+}
+
+/*Animación*/
+
+.animar {
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+
+}
+
+.animar2 {
+    animation-name: animacion2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+
+@keyframes animacion {
+    0% { 
+        opacity: 0;
+        color: white;
+    
+    }
+    30% {
+        color: white;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes animacion2 {
+    from { 
+        transform: translateX(-300px); 
+        color: white;
+    }
+    
+    to { 
+        transform: translateX(0);
+    }
+}
+
+
+
+/*Grid*/
+
+#gridAreas {
+    display: grid;
+    grid-template-areas: 
+    /*Fila 1*/
+    "cabeza cabeza cabeza"
+   /*Fila 2*/
+    "menu menu menu" 
+   /*Fila 3*/
+    "productos productos productos"
+    /*Fila 4*/
+    "servicios servicios servicios"
+    /*Fila 4*/
+    "pie pie pie"
+    ;
+
+    grid-template-columns: 15% auto 10% ;
+    grid-template-rows: 1fr 1fr 3fr 1fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+
+/* Nombrar cada area */
+
+header {
+    grid-area: cabeza;
+ }
+ footer {
+    grid-area: pie;
+ }
+ #productos {
+    grid-area: productos;     
+ }
+ #servicios {
+    grid-area: servicios;     
+ }
+ nav {
+    grid-area: menu;
+ }
+ 
+
+ article {
+     margin: 5px;
+     padding: 5px;
+     background-color: floralwhite;
+     border-radius: 10px;
+     justify-content: center;
+     align-items: center;
+
+ }
+article p {
+    text-align: center;
+}
+
+
+ /*flex - gradiente */
+.flexMenu {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     
+}
+
+.flexHeader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(white 50%, rgb(226, 226, 226) 90% ) ;
+
+    
+}
+
+.flexProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width:1023px) {
+    
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        /*Fila 1*/
+        "cabeza cabeza"
+       /*Fila 2*/
+        "menu menu"
+       /*Fila 3*/
+        "productos productos"
+        /*Fila 4*/
+        "servicios servicios"
+        /*Fila 4*/
+        "pie pie"
+        ;
+    
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+
+}
+
+/*Smartphone*/
+
+@media (max-width: 480px) {
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        /*Fila 1*/
+        "cabeza"
+       /*Fila 2*/
+        "menu"
+       /*Fila 3*/
+        "productos "
+        /*Fila 4*/
+        "servicios"
+        /*Fila 5*/
+        "pie"
+        ;
+    
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+    span {
+        background-color: rgb(209, 209, 209);
+        margin-bottom: 5px;
+        }
+
+         /*flex*/
+        .flexMenu {
+             display: flex;
+             flex-direction: column;    
+
+        }
+        .flexProductos {
+            display: flex;
+            flex-direction: column;
+        }
+        .flexHeader {
+            padding: 5px;
+        }
+
+}
+
