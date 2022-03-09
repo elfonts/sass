@@ -1,5 +1,5 @@
 // Linea 28 a la 47 SASS 
-
+/*hola*/ 
 /*prueba de Sass*/
 
 /*Box Model*/
@@ -43,9 +43,9 @@ span {
 }
 
 //Import
-@import "responsive";
-@import "animacion";
 
+@import "animacion";
+@import "responsive";
 
 h2 {
     color: gray;

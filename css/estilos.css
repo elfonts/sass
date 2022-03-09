@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*hola*/
 /*prueba de Sass*/
 /*Box Model*/
 /*VOLVER A SUMER headerProductos al css*/
@@ -34,43 +35,6 @@ span:hover {
   color: honeydew;
 }
 
-/*Tablet*/
-@media (min-width: 481px) and (max-width: 1023px) {
-  #gridAreas {
-    display: grid;
-    grid-template-areas: "cabeza cabeza" "menu menu" "productos productos" "servicios servicios" "pie pie";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
-    grid-column-gap: 10px;
-    grid-row-gap: 5px;
-  }
-}
-/*Smartphone*/
-@media (max-width: 480px) {
-  #gridAreas {
-    display: grid;
-    grid-template-areas: "cabeza" "menu" "productos " "servicios" "pie";
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
-    grid-column-gap: 10px;
-    grid-row-gap: 5px;
-  }
-
-  span {
-    background-color: #d1d1d1;
-    margin-bottom: 5px;
-  }
-
-  /*flex*/
-  .flexMenu {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flexHeader {
-    padding: 5px;
-  }
-}
 /*Animación*/
 .animar {
   animation-name: animacion;
@@ -107,6 +71,7 @@ span:hover {
     transform: translateX(0);
   }
 }
+
 h2 {
   color: gray;
   font-size: 20px;
@@ -208,6 +173,44 @@ article p {
   justify-content: center;
   align-items: center;
   background-image: radial-gradient(white 50%, #e2e2e2 90%);
+}
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "cabeza cabeza" "menu menu" "productos productos" "servicios servicios" "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+}
+/*Smartphone*/
+@media (max-width: 480px) {
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "cabeza" "menu" "productos " "servicios" "pie";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+
+  span {
+    background-color: #d1d1d1;
+    margin-bottom: 5px;
+  }
+
+  /*flex*/
+  .flexMenu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexHeader {
+    padding: 5px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
