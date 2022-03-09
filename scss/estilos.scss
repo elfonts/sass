@@ -1,0 +1,184 @@
+// Linea 28 a la 47 SASS 
+
+/*prueba de Sass*/
+
+/*Box Model*/
+/*VOLVER A SUMER headerProductos al css*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Responsive*/
+
+/*Desktop*/
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    padding: 20px;
+    margin-top: 0px;
+
+}
+
+// Anidamiento Uso del & con el Nesting
+span {
+    background-color: rgb(209, 209, 209);
+    padding: 10px 35px;
+    text-align: center;
+    border-radius: 20px;
+    align-content: center;
+    margin-left: 10px;
+         &:hover {
+        border-left: solid 5px rgb(0, 175, 175);
+        background-color: rgb(32, 158, 167);
+        color: honeydew;
+
+
+        }
+}
+
+//Import
+@import "responsive";
+@import "animacion";
+
+
+h2 {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: gray;
+    font-size: 20px;
+    text-align: left;
+    margin: 5px;
+
+}
+
+p {
+    text-align: justify;
+    margin: 5px;
+
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.border {
+    border: solid 1px rgb(255, 255, 255);
+    background-color: rgb(243, 243, 243);
+}
+
+.cabeza {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.article {
+    width: 200px;
+}
+
+
+
+#servicios {
+    background-image: url(../img/back3.jpg);
+    margin: 5px;
+}
+
+/*Transicion (cambiar article a section*/
+
+
+
+
+
+
+
+
+/*Grid*/
+
+#gridAreas {
+    display: grid;
+    grid-template-areas:
+        /*Fila 1*/
+        "cabeza cabeza cabeza"
+        /*Fila 2*/
+        "menu menu menu"
+        /*Fila 3*/
+        "productos productos productos"
+        /*Fila 4*/
+        "servicios servicios servicios"
+        /*Fila 4*/
+        "pie pie pie"
+    ;
+
+    grid-template-columns: 15% auto 10%;
+    grid-template-rows: 1fr 1fr 3fr 1fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+
+/* Nombrar cada area */
+
+header {
+    grid-area: cabeza;
+
+}
+
+footer {
+    grid-area: pie;
+}
+
+#productos {
+    grid-area: productos;
+}
+
+#servicios {
+    grid-area: servicios;
+}
+
+nav {
+    grid-area: menu;
+}
+
+
+article {
+    margin: 5px;
+    padding: 5px;
+    background-color: floralwhite;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+article p {
+    text-align: center;
+}
+
+
+/*flex - gradiente */
+.flexMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.flexHeader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(white 50%, rgb(226, 226, 226) 90%);
+
+
+}
